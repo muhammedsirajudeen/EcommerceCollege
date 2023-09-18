@@ -12,16 +12,22 @@ export const authOptions = {
       }),
       // ...add more providers here
     ],
+    //callback is having some issues so for now just ignore it and develop other pieces
     callbacks:{
-      async signIn(user,account,profile){
-        
-        return '/home'
+    //   async signIn(user,account,profile){
+    //     // console.log(user)   
+    //     return '/home'
 
-      }
+    //   }
+
     },
     jwt:{
       secret:"secret",
       encryption:false
-    }
+    },
+    session:{
+      jwt:true
+    },
+    
   }
   export default NextAuth(authOptions)

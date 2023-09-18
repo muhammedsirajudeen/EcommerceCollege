@@ -2,11 +2,11 @@
 import mongoose from 'mongoose';
 
 let Product;
-
+let productSchema
 if (mongoose.models && mongoose.models.Product) {
   Product = mongoose.models.Product;
 } else {
-  const productSchema = new mongoose.Schema({
+  productSchema = new mongoose.Schema({
     productName: String,
     price: Number,
     description: String,
@@ -14,5 +14,5 @@ if (mongoose.models && mongoose.models.Product) {
   });
   Product = mongoose.model('Product', productSchema);
 }
-
-export default Product;
+export default Product
+export {productSchema};
