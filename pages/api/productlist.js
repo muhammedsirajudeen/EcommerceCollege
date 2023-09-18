@@ -11,7 +11,7 @@ export default async function handler(req, res) {
     }
     try {
         const productDetails = await Product.find();
-        console.log(productDetails);
+        
         res.json(productDetails);
       } catch (error) {
         console.error('Error fetching product details:', error);

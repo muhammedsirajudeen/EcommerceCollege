@@ -1,9 +1,14 @@
 import styles from "@/styles/Home.module.css"
 import { useEffect } from "react"
+import { useSession } from "next-auth/react"
 export default function Home(){
+    const {data:session}=useSession()
     useEffect(()=>{
-        // load the product details here
-    })
+        console.log(session)
+        if(session){
+            alert(session.user.email)
+        }
+    },[session])
     return (
         <div className={styles.navbarcontainer}>
             <a href="/home" className={styles.navitem}>home</a>

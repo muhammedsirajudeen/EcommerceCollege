@@ -14,10 +14,14 @@ export const authOptions = {
     ],
     callbacks:{
       async signIn(user,account,profile){
+        
         return '/home'
 
       }
     },
-    jwt:"secret123"
+    jwt:{
+      secret:"secret",
+      encryption:false
+    }
   }
   export default NextAuth(authOptions)

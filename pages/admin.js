@@ -27,7 +27,7 @@ export default function admin(){
             imageLink:imagelink
         }
         )
-        c
+        location.reload()
         
     }
     function productnameHandler(e){
@@ -44,8 +44,11 @@ export default function admin(){
         setimageLink(e.target.value)
     }
     
-    function deleteHandler(e){
+    async function deleteHandler(e){
         console.log(e.target.id)
+        let response=await axios.delete(`/api/productdelete?id=${e.target.id}`)
+        location.reload()
+        
     }
 
     return(
