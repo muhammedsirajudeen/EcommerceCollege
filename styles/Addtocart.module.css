@@ -1,0 +1,33 @@
+.maincontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.subcontainer{
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+}
+.productcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80vw;
+    margin: 5%;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+}
+.productimage{
+    height: 100px;
+    width: 100px;
+}
+.productname{
+    font-weight: 900;
+    font-size: larger;
+}
+.description{
+    font-weight: 700;
+}

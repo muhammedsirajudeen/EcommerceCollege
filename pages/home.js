@@ -38,7 +38,7 @@ export default function Home(){
         <div className={styles.navbarcontainer}>
             <a href="/home" className={styles.navitem}>home</a>
             <a href="/contact" className={styles.navitem}>contact us</a>
-            <a href="/cart" className={styles.navitem}>your cart</a>
+            <a href="/addtocart" className={styles.navitem}>your cart</a>
             <button className={styles.signout} onClick={signoutHandler} >signout</button>
             <div>{username} </div>
         </div>
