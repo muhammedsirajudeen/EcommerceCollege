@@ -24,6 +24,7 @@ export default async function handler(req, res) {
            
             newdoc.cart=[
                 {
+                    productId:req.body.productid,
                     productName:productdoc.productName,
                     price:productdoc.price,
                     description:productdoc.description,
@@ -43,6 +44,7 @@ export default async function handler(req, res) {
             newdoc.cart=cartdoc[0].cart
             newdoc.cart.push(
                 {
+                    productId:req.body.productid,
                     productName:productdoc.productName,
                     price:productdoc.price,
                     description:productdoc.description,

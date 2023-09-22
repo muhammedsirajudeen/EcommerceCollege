@@ -31,3 +31,17 @@
 .description{
     font-weight: 700;
 }
+.checkoutwrapper{
+    width: 100%;
+    position: fixed;
+    bottom: 2vh;
+    left: 30vw;
+}
+.checkoutcontainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    border-style: solid;
+    border-radius: 10px;
+}
