@@ -1,0 +1,26 @@
+.ordercontainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.orderheading{
+    font-size: large;
+    font-weight: 900;
+}
+.ordersubcontainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    flex-wrap: wrap;
+}
+.orderimage{
+    height: 100px;
+    width: 100px;
+}
+.orderbutton{
+    background-color: blue;
+    color: white;
+    font-size: large;
+}

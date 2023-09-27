@@ -62,8 +62,13 @@ export default function Addtocart(){
                 orderoptions.name=session ? session.user.email : "ACME CORP" 
                 orderoptions.order_id=orderid
                 orderoptions.handler=async (response)=>{
-                    let data=await axios.post("/api/order/ordersuccess")
+                    let data=await axios.post("/api/order/ordersuccess",
+                    {
+                        email:session.user.email
+                    })
+                    //here we are sending the email of the user 
                     console.log(data.data)
+                    window.location.reload()
                 }
                 var rzp1 = new Razorpay(orderoptions);
                 rzp1.on('payment.failed', function (response){

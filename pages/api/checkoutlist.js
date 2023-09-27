@@ -7,7 +7,11 @@ export default async function handler(req, res) {
     }
 
     let cartdoc=await Cart.findOne({username:req.query.email})
-  
-    res.status(200).json({ cartdata: cartdoc.cart })
+    if(cartdoc){
+        res.status(200).json({ cartdata: cartdoc.cart })
+
+    }else{
+        res.status(200).json({ cartdata: [] })
+    }
   }
   
