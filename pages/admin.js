@@ -82,7 +82,7 @@ export default function admin(){
                                 <div className={styles.productText}>{value.productName}</div>
                                 <div className={styles.productText}>{value.price}</div>
                                 <div className={styles.descriptionbox}>{value.description}</div>
-                                <button id={value._id} onClick={deleteHandler}>delete</button>
+                                <button id={value._id} onClick={deleteHandler} className={styles.uploadbutton} >delete</button>
                                 
                             </div>
                         )

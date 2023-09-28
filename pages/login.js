@@ -8,7 +8,7 @@ export default function Login(){
     useEffect(()=>{
         if(session){
             console.log(session.user.email)
-            location.href="/home"
+            location.href="/"
         }
     },[session])
    

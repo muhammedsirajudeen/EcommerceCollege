@@ -1,26 +1,71 @@
-.ordercontainer{
+/* AdminManage.module.css */
+
+.ordermaincontainer {
     display: flex;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
     width: 100%;
-}
-.orderheading{
-    font-size: large;
-    font-weight: 900;
-}
-.ordersubcontainer{
+    padding: 20px;
+  }
+  
+  .ordercontainer {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    width: 80%;
-    flex-wrap: wrap;
-}
-.orderimage{
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ordersubcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    background-color: #fff;
+    text-align: left;
+  }
+  
+  .orderheading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .ordertext {
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .orderimage {
     height: 100px;
     width: 100px;
-}
-.orderbutton{
-    background-color: blue;
-    color: white;
-    font-size: large;
-}
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .orderbutton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .orderbutton:hover {
+    background-color: #0056b3;
+  }
+  

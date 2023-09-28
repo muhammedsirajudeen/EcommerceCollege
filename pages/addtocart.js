@@ -64,7 +64,8 @@ export default function Addtocart(){
                 orderoptions.handler=async (response)=>{
                     let data=await axios.post("/api/order/ordersuccess",
                     {
-                        email:session.user.email
+                        email:session.user.email,
+                        address:address
                     })
                     //here we are sending the email of the user 
                     console.log(data.data)
@@ -94,10 +95,13 @@ export default function Addtocart(){
             <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
         </Head>
         <div className={homestyles.navbarcontainer}>
-            <a href="/home" className={homestyles.navitem}>home</a>
+            <a href="/" className={homestyles.navitem}>home</a>
             <a href="/contact" className={homestyles.navitem}>contact us</a>
             <a href="/addtocart" className={homestyles.navitem}>your cart</a>
-            <button className={homestyles.signout} onClick={signoutHandler} >signout</button>
+            <a href="/yourorder" className={homestyles.navitem}>your order</a>
+            <div>{session? session.user.email : "please signin"} </div>
+
+            <button className={styles.signout} onClick={signoutHandler} >signout</button>
             
         </div>
         <div className={styles.maincontainer}>

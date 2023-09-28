@@ -7,6 +7,8 @@ export default async function Handler(req,res){
     if(mongoose.connection.readyState===0){
         await connectDB()
     }
+    let address=req.body.address
+    
     let doc=await Cart.findOne({username:req.body.email})
    
     var newObj = {};
@@ -16,6 +18,7 @@ export default async function Handler(req,res){
         newObj[key] = doc[key];  //simple code to just transfer the properties
         }
     }
+    newObj.address=req.body.address
 
     let orderbox=new orderboxModel(newObj)
     try{

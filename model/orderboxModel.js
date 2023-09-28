@@ -13,7 +13,9 @@ if (mongoose.models && mongoose.models.orderboxModel) {
   })
   const cartSchema = new mongoose.Schema({
     username:String,
+    address:String,
     cart:[productSchema]
+    
   })
   orderboxModel = mongoose.model('orderboxModel', cartSchema);
 }
