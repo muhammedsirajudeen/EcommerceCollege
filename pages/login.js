@@ -34,7 +34,8 @@ export default function Login(){
                 <button onClick={passwordHandler} className={styles.googlebutton} >login</button>
                 <p className={styles.or}>or</p>
                 <button onClick={googlesigninHandler} className={styles.googlebutton} >google signin</button>
-                <button onClick={signout} className={styles.googlebutton} >signout</button>
+                <br></br>
+                <button onClick={signout} className={styles.signout} >signout</button>
             
             </div>
 
