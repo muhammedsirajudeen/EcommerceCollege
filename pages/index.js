@@ -41,7 +41,7 @@ export default function Home(){
             <a href="/addtocart" className={styles.navitem}>your cart</a>
             <a href="/yourorder" className={styles.navitem}>your orders</a>
             <button className={styles.signout} onClick={signoutHandler} >signout</button>
-            <div>{username} </div>
+            <div>{session ? session.user.email : <a href="/api/auth/signin" className={styles.navitem} >signin</a>} </div>
         </div>
 
         <div className={styles.productmaincontainer}>
