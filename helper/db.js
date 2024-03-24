@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-const dbURI="mongodb+srv://vava:vava@cluster0.vuxyl3c.mongodb.net/?retryWrites=true&w=majority"
+const dbURI=process.env.MONGODB_URI
 
 const connectDB = async () => {
   try {
