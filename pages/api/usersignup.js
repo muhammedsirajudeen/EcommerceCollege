@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import userModel from "@/model/userModel";
+import connectDB from "@/helper/db";
 export default async function Handler(req,res){
     if(req.method==='POST'){
         if(mongoose.connection.readyState===0){
